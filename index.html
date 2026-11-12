@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>シンプル音声アシスタント</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="container">
+    <h1>音声アシスタント</h1>
+    
+    <!-- 現在の状態表示 -->
+    <div id="status" class="status">停止中</div>
+
+    <!-- 認識された言葉と返答の表示 -->
+    <div class="log-box">
+      <p><strong>認識した言葉:</strong> <span id="recognized-text">-</span></p>
+      <p><strong>アシスタント:</strong> <span id="assistant-reply">-</span></p>
+    </div>
+
+    <!-- プログラム実行結果の表示エリア -->
+    <div id="action-result" class="action-box hidden">
+      ✅ プログラム実行: あいさつ処理が完了しました
+    </div>
+
+    <!-- 操作ボタン -->
+    <button id="start-btn" class="btn">アシスタントを起動</button>
+
+    <!-- マイクが使えない環境用のテストボタン -->
+    <div class="test-area">
+      <p class="test-label">テスト用ボタン（マイクなしで確認）:</p>
+      <button id="test-wake-btn" class="btn-sub">「もしもし」と発言</button>
+      <button id="test-cmd-btn" class="btn-sub">「こんにちは」と発言</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
